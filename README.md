@@ -3,7 +3,7 @@
 ### QUESTIONS 2.1 explications: 
  j'ai structuré mon code de cette maniere a fin 'organiser mes fichiers selon une logique qui est définie et claire ce ci dans le but de permettre une maintenance assez facile de l'API
 
- ###  dans un environement de productionce que je peux faire differemment est de :
+ ###  dans un environement de production ce que je peux faire différemment est de :
 
   1. Tests automatisés : Utiliser des tests automatisés pour s’assurer que toutes les nouvelles modifications fonctionnent comme prévu avant leur déploiement.
 
