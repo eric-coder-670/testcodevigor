@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 
+
+//model user
 const UserModel = new schema({
     firstname: { type: String, required: true },
     lastname: { type: String, required: true },

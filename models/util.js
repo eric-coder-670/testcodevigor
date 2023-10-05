@@ -1,10 +1,12 @@
+// Importing the required modules
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+
+// Loading environment variables from .env file
 require('dotenv').config({ path: "./.env" });
 
-
+// Function to create a JWT token for a book
 const createToken = book => {
-  
     return jwt.sign(
         {
             sub: book._id,
@@ -17,14 +19,14 @@ const createToken = book => {
     );
 };
 
-
-const hashePassword = password => {
-    return Promise((resolve, reject) => {
+// Function to hash a password using bcrypt
+const hashPassword = password => {
+    return new Promise((resolve, reject) => {
         bcrypt.genSalt(12, (err, salt) => {
             if (err) {
                 reject(err);
             }
-            bcrypt.hash(password, salt, (err, bcrypt, hash) => {
+            bcrypt.hash(password, salt, (err, hash) => {
                 if (err) {
                     reject(err)
                 }
@@ -34,12 +36,14 @@ const hashePassword = password => {
     });
 } 
 
+// Function to verify a password with a hashed password using bcrypt
 const verifyPassword = (passwordAttempt, hashedPassword) => {
     return bcrypt.compare(passwordAttempt, hashedPassword);
 }
 
+// Exporting the functions
 module.exports = {
     createToken,
-    hashePassword,
+    hashPassword,
     verifyPassword
 }
