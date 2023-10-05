@@ -1,43 +1,43 @@
-# ** PARTIE 2 : QUESTIONS ECRITES**
+# **PART 2: WRITTEN QUESTIONS**
 
-### QUESTIONS 2.1 explications: 
- j'ai structuré mon code de cette maniere a fin 'organiser mes fichiers selon une logique qui est définie et claire ce ci dans le but de permettre une maintenance assez facile de l'API
+### QUESTIONS 2.1 explanations:
+ I structured my code in this way in order to organize my files according to a logic which is defined and clear in order to allow fairly easy maintenance of the API
 
- ###  dans un environement de productionce que je peux faire differemment est de :
+ ### in a production environment what I can do differently is:
 
-  1. Tests automatisés : Utiliser des tests automatisés pour s’assurer que toutes les nouvelles modifications fonctionnent comme prévu avant leur déploiement.
+  1. Automated Testing: Use automated testing to ensure that all new changes work as expected before deployment.
 
-  2. Maintenance du code : S’assurer que le code est propre, bien documenté et facile à maintenir.
+  2. Code maintenance: Ensure that the code is clean, well-documented and easy to maintain.
 
-  3. Intégration continue / Déploiement continu (CI/CD) : Mettre en place un pipeline CI/CD pour automatiser le processus de déploiement et minimiser les erreurs humaines. 
+  3. Continuous Integration / Continuous Deployment (CI/CD): Establish a CI/CD pipeline to automate the deployment process and minimize human errors.
 
-  ### Questions 2.2: Révision de code
+  ### Questions 2.2: Code review
 
-  1. il primordial de s'assurer de la validation de toutes les données afin de sassurer qu'elles sont dans le format attendus
+  1. it is essential to ensure the validation of all data to ensure that they are in the expected format
 
-  2. gérer les erreurs avec try/catch car lors de l'ajout de l'utilisateur il pourraity avoir des disfonctionnements qui serait incompréhensible sans gestions des erreurs 
+  2. manage errors with try/catch because when adding the user there could be malfunctions which would be incomprehensible without error management
 
-3. inclure plus d'information dans les messages d'erreurs afin de mieux comprendre la cause du disfonctionnements.
+3. include more information in error messages to better understand the cause of the malfunction.
 
-4. Utiliser une fonction asynchrone afin d attenre affin d'attendre la fin de chaque avant de retourner une reponse .
+4. Use an asynchronous function to wait to wait for the end of each before returning a response.
 
-# **PARTIE 3 Tache de gestions du temps:**
+# **PART 3 Time management task:**
 
-### 3.1 **priorisation et planification:** 
- je procederais e en fonction de la priorité et l'importance de chaques taches:
- 1. correction des bugs : car elle affecte directement les utiliteurs 
+### 3.1 **prioritization and planning:**
+ I would proceed according to the priority and importance of each task:
+ 1. bug fixes: because it directly affects users
 
- 2. dans le but de satisfaire les clients , je me pencherais sur le developpement d'une nouvelle fonctionalité
+ 2. in order to satisfy customers, I would look into the development of a new functionality
 
-3. je Documenterais par la suite L'API afin de fciliter sa maintenabilité ainsi que le travail des autres memebres de l'equipe
+3. I would subsequently Document the API in order to facilitate its maintainability as well as the work of other members of the team
 
-4. en fin j'obtimiserais les requêtes de base de données
+4. finally I would optimize the database queries
 
-### **tableau de la gestion des taches** 
+### **task management table**
 
-        | Numéro de  taches  | Nombrede jour durée |
-        |---                 |                  --:|
-        |1                   |              2 jours|
-        |2                   |              3 jours|
-        |3                   |              1 jours|
-        |4                   |              1 jours|
+        | Spot number | Number of days duration |
+        |--- | --:|
+        |1 | 2 days|
+        |2 | 3 days|
+        |3 | 1 days|
+        |4 | 1 days|
