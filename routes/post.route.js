@@ -1,21 +1,22 @@
-// Importing the required 'express' module
+const { countRecipes } = require("../controllers/recette/count-recette");
+const { getRecipes } = require("../controllers/recette/list-recette");
+const { updateRecipe } = require("../controllers/recette/update-recette");
+const { deleteRecipe } = require("../controllers/recette/delete-recette");
+const createRecipe = require("../controllers/recette/create-recette")
+const createCategory =  require("../controllers/categories/createCategories");
+const getCategory = require("../controllers/categories/listCategories");
 const router = require("express").Router();
 
-// Importing the necessary functions from the 'post.controller' module
-const {
-    loginUser,
-    signUser,
-    createdBook 
-} = require("../controllers/post.controller");
+//Recette
+router.get("/count", countRecipes);
+router.post("/create/recipes", createRecipe);
+router.post("/list/recipes", getRecipes);
+router.put("/update/recette", updateRecipe);
+router.delete("/delete/recette", deleteRecipe);
 
-// Route for user registration
-router.post("/sign", signUser);
+//Categories
+router.post("/create/category", createCategory);
+router.post("/list/category", getCategory );
 
-// Route for user login
-router.post("/login", loginUser);
 
-// Route for creating a new book
-router.post("/newbook", createdBook);
-
-// Exporting the router module
 module.exports = router;
