@@ -2,47 +2,45 @@ const RecipeModel = require('../../models/recette.model');
 
 const createRecipe = async (req, res) => {
     try {
-        const {title,
+        const {
+            title,
             ingredients,
             instructions,
-            imageUrl,
             description,
             level,
-            numberPersons,
+            number_personne,
+            imageUrl,
             videoUrl,
-            category} = req.body;
-
-        if (!title || !ingredients || !instructions || !category) {
-            return res.status(400).json({
-                message: 'Veuillez fournir toutes les données nécessaires pour créer une recette.'
-            });
-        }
+            category,
+        } = req.body;
 
         const newRecipe = new RecipeModel({
             title,
             ingredients,
             instructions,
-            imageUrl,
-            level,
             description,
-            numberPersons,
+            level,
+            number_personne,
+            imageUrl,
             videoUrl,
-            category
+            category,
         });
 
-        console.log("Nouvelle recette :", { title, ingredients, instructions, imageUrl});
-
         const savedRecipe = await newRecipe.save();
-
+console.log('recettecréer',newRecipe);
         if (savedRecipe) {
-            res.json({
-                message: 'Recette créée avec succès',
-                savedRecipe
-            });
+            res
+                .status(200)
+                .json({
+                    message: 'Recette créée avec succès',
+                    savedRecipe
+                });
         } else {
-            return res.status(400).json({
-                message: 'Impossible de créer la recette'
-            });
+            return res
+                .status(400)
+                .json({
+                    message: 'Impossible de créer la recette'
+                });
         }
 
     } catch (error) {

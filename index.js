@@ -17,7 +17,7 @@ app.use(cors(corsOptions));
 
 
 require('dotenv').config({ path: './.env' });
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 require('./configs/database');
 

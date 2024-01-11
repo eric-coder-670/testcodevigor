@@ -15,30 +15,30 @@ const RecipeModel = new schema({
         type: String,
         required: true
     },
-    descritpion: {
+    description: {
         type: String,
-        require: false
+        require: true
     },
     level: {
         type: Number,
-        require: false
+        require: true 
     },
-    numberPersonne: {
+    number_personne: {
         type: Number,
-        require: false
+        require: true 
     },
     imageUrl: {
         type: String,
-        require: false
+        require: true 
     },
-    videaoUrl: {
+    videoUrl: {
         type: String,
-        require: false
+        require: true 
     },
     // user: {
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref: 'user',
-    //     required: false
+    //     required: true 
     // },
     category: {
         type: mongoose.Schema.Types.ObjectId,
@@ -55,6 +55,6 @@ const RecipeModel = new schema({
     }
 });
 
-const recette = mongoose.model('recipe', RecipeModel);
+const recette = mongoose.model('recipes', RecipeModel);
 module.exports = recette;
 

@@ -11,8 +11,8 @@ const router = require("express").Router();
 router.get("/count", countRecipes);
 router.post("/create/recipes", createRecipe);
 router.post("/list/recipes", getRecipes);
-router.put("/update/recette", updateRecipe);
-router.delete("/delete/recette", deleteRecipe);
+router.put("/update/recipes", updateRecipe);
+router.delete("/delete/recipes", deleteRecipe);
 
 //Categories
 router.post("/create/category", createCategory);
