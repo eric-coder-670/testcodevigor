@@ -27,7 +27,6 @@ const createRecipe = async (req, res) => {
         });
 
         const savedRecipe = await newRecipe.save();
-console.log('recettecréer',newRecipe);
         if (savedRecipe) {
             res
                 .status(200)
